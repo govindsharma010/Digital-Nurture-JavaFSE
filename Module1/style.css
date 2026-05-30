@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+}
+
+nav{
+    background-color:black;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+}
+
+#welcomeBanner{
+    background-color:blue;
+    color:white;
+    padding:20px;
+    margin:20px;
+}
+
+.highlight{
+    color:green;
+}
+
+.gallery{
+    width:200px;
+    height:150px;
+    border:3px solid black;
+}
+
+table{
+    margin:auto;
+}
+
+form{
+    width:50%;
+    margin:auto;
+    border:1px solid gray;
+    padding:20px;
+}
+
+footer{
+    background:black;
+    color:white;
+    padding:20px;
+    margin-top:20px;
+}

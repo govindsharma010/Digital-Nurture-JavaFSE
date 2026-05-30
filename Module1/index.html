@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onbeforeunload="return confirmExit()">
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+
+        <!-- Exercise 3 -->
+        <div id="welcomeBanner">
+            Welcome Resident!
+            <span style="color:red;font-weight:bold;">
+                Special Offer: Free Registration Today!
+            </span>
+        </div>
+
+        <h1 class="highlight" id="home">
+            Local Community Event Portal
+        </h1>
+
+        <!-- Exercise 4 -->
+        <section id="events">
+
+            <h2>Community Event Gallery</h2>
+
+            <table>
+                <tr>
+                    <td>
+                        <img src="images/event1.jpg" alt="Music Fest"
+                            title="Music Fest" class="gallery">
+                        <p>Music Fest</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event2.jpg" alt="Food Carnival"
+                            title="Food Carnival" class="gallery">
+                        <p>Food Carnival</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event3.jpg" alt="Book Fair"
+                            title="Book Fair" class="gallery">
+                        <p>Book Fair</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/event4.jpg" alt="Art Show"
+                            title="Art Show" class="gallery">
+                        <p>Art Show</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event5.jpg" alt="Sports Day"
+                            title="Sports Day" class="gallery">
+                        <p>Sports Day</p>
+                    </td>
+
+                    <td>
+                        <img src="images/event6.jpg" alt="Cultural Event"
+                            title="Cultural Event" class="gallery">
+                        <p>Cultural Event</p>
+                    </td>
+                </tr>
+            </table>
+
+        </section>
+
+        <!-- Exercise 5 -->
+        <section>
+
+            <h2>Event Registration</h2>
+
+            <form id="registrationForm">
+
+                <input type="text"
+                    id="name"
+                    placeholder="Enter Name"
+                    required
+                    autofocus>
+
+                <br><br>
+
+                <input type="email"
+                    placeholder="Enter Email"
+                    required>
+
+                <br><br>
+
+                <input type="date"
+                    required>
+
+                <br><br>
+
+                <select id="eventType"
+                    onchange="showFee(); savePreference();">
+                    <option value="">Select Event</option>
+                    <option value="100">Music Fest</option>
+                    <option value="200">Food Carnival</option>
+                    <option value="150">Sports Day</option>
+                </select>
+
+                <p id="fee"></p>
+
+                <textarea
+                    id="feedback"
+                    placeholder="Message"
+                    onkeyup="countChars()"></textarea>
+
+                <p>Characters: <span id="charCount">0</span></p>
+
+                <br>
+
+                <input type="text"
+                    id="phone"
+                    placeholder="Phone Number"
+                    onblur="validatePhone()">
+
+                <br><br>
+
+                <button type="button"
+                    onclick="registerUser()">
+                    Submit
+                </button>
+
+                <output id="confirmation"></output>
+
+            </form>
+
+        </section>
+
+        <!-- Exercise 6 -->
+        <section>
+
+            <h2>Double Click Image</h2>
+
+            <img src="images/event1.jpg"
+                id="zoomImage"
+                ondblclick="enlargeImage()"
+                width="200">
+
+        </section>
+
+        <!-- Exercise 7 -->
+        <section>
+
+            <h2>Event Promo Video</h2>
+
+            <video width="500"
+                controls
+                oncanplay="videoReady()">
+
+                <source src="videos/promo.mp4"
+                    type="video/mp4">
+
+            </video>
+
+            <p id="videoMsg"></p>
+
+        </section>
+
+        <!-- Exercise 8 -->
+        <section>
+
+            <button onclick="clearStorage()">
+                Clear Preferences
+            </button>
+
+        </section>
+
+        <!-- Exercise 9 -->
+        <section>
+
+            <button onclick="findLocation()">
+                Find Nearby Events
+            </button>
+
+            <p id="location"></p>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>Contact: communityportal@gmail.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
