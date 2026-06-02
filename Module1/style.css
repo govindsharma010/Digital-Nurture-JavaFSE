@@ -1,50 +1,380 @@
-body{
-    font-family: Arial, sans-serif;
+/*
+   UNIVERSAL SELECTOR
+ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* 
+   ELEMENT SELECTOR
+*/
+
+h2{
+
+    color:white;
+
+    background:linear-gradient(
+        to right,
+        #007BFF,
+        #00C6FF
+    );
+
+    padding:12px;
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:600;
+
+    text-transform:capitalize;
+}
+
+/*
+   ID SELECTOR
+ */
+
+#mainHeader{
+
+    background:#2c3e50;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    font-size:28px;
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    
+}
+
+/* 
+   CLASS SELECTOR
+ */
+
+.eventCard{
+
+    background:white;
+
+    border:2px solid #999;
+
+    padding:20px;
+
+    margin:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+/* 
+   GROUPING SELECTOR
+ */
+
+h3{
+
+    color:#2c3e50;
+
+    font-size:22px;
+
+    font-weight:600;
+}
+
+p{
+
+    color:#333;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    letter-spacing:1px;
+
     text-align:center;
 }
 
-nav{
-    background-color:black;
-    padding:15px;
+
+
+
+/* 
+   BODY STYLES
+ */
+
+body{
+    
+    font-family:Arial,sans-serif;
+
+    text-align:center;
+
+    /* Fallback color */
+
+    background-color:#dfe6e9;
+
+    /* Background image */
+
+    background-image:url("images/background.jpg");
+
+    background-size:cover;
+
+    background-attachment:fixed;
 }
 
-nav a{
-    color:white;
-    margin:15px;
-    text-decoration:none;
+/* 
+   NAVIGATION BAR
+*/
+
+nav{
+
+    background:#000;
 }
+
+nav ul{
+
+    list-style-type:none;
+
+    list-style-position:inside;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center; 
+    flex-wrap : wrap;
+}
+nav ul li{
+
+    margin:10px;
+
+    padding:10px;
+}
+/*
+   WELCOME BANNER
+ */
 
 #welcomeBanner{
-    background-color:blue;
+
+    background:rgba(0,123,255,0.85);
+
     color:white;
-    padding:20px;
-    margin:20px;
+
+    padding:2vh;
+
+    font-size:2vw;
 }
+
+/* 
+   HIGHLIGHTED TEXT
+*/
 
 .highlight{
     color:green;
 }
 
+/* 
+   IMAGE GALLERY
+ */
+
 .gallery{
-    width:200px;
-    height:150px;
+
+    width:100%;
+
+    max-width:200px;
+
+    height:auto;
+
     border:3px solid black;
 }
+
+/* 
+   TABLE STYLES
+ */
 
 table{
     margin:auto;
 }
 
+/* 
+   FORM STYLES
+ */
+
 form{
-    width:50%;
+
+    width:60%;
+
     margin:auto;
-    border:1px solid gray;
+
+    background:white;
+
     padding:20px;
+
+    border-radius:10px;
 }
+
+/* 
+   FOOTER STYLES
+ */
 
 footer{
     background:black;
     color:white;
     padding:20px;
     margin-top:20px;
+}
+.offerText{
+
+    color:red;
+
+    font-weight:700;
+
+    font-style:italic;
+
+    letter-spacing:1px;
+}
+/* =
+   LINK STATES
+*/
+
+a:link{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+a:visited{
+
+    color:lightgreen;
+}
+
+a:hover{
+
+    color:yellow;
+
+    text-decoration:underline;
+}
+
+a:active{
+
+    color:red;
+}
+/* 
+   FORM FIELD OUTLINE
+ */
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:3px solid blue;
+}
+/* 
+   VISIBILITY DEMO
+ */
+
+.hiddenBox{
+
+    visibility:hidden;
+}
+
+.noneBox{
+
+    display:none;
+}
+/*
+   COMMUNITY BULLETIN
+*/
+
+.newsSection{
+
+    column-count:2;
+
+    column-gap:30px;
+
+    column-rule:1px solid gray;
+
+    padding:20px;
+
+    background:white;
+
+    margin:20px;
+
+    text-align:justify;
+
+    line-height:1.8;
+}
+
+/*
+   RESPONSIVE DESIGN
+*/
+
+@media screen and (max-width:768px){
+
+    /* Navigation */
+
+    nav ul{
+
+        flex-direction:column;
+    }
+
+    /* Header */
+
+    #mainHeader{
+
+        font-size:22px;
+    }
+
+    h2{
+
+        font-size:20px;
+    }
+
+    /* Forms */
+
+    form{
+
+        width:90%;
+    }
+
+    /* Table */
+
+    table{
+
+        width:100%;
+    }
+
+    /* News Section */
+
+    .newsSection{
+
+        column-count:1;
+    }
+
+    /* Event Cards */
+
+    .eventCard{
+        max-width: 400px;
+        margin:10px auto;
+    }
+    table, tr, td{
+        display : block;
+        width  : 100%;
+    }
+
+    /* Images */
+
+    .gallery{
+
+        max-width:120px;
+    }
 }
